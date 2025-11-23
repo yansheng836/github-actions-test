@@ -1,0 +1,59 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*' # 推送以 'v' 开头的 tag 时触发，例如 v1.0.0
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 赋予创建 Release 和上传附件的写入权限
+
+    steps:
+      # 1. 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. 设置 Node.js 环境 (示例，可根据项目需要替换)
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '20'
+
+      # 3. 安装依赖并构建 (示例，请替换为你的项目构建命令)
+      # - name: Install dependencies and build
+      #   run: |
+      #     npm ci
+      #     npm run build
+
+      # 4. 准备 Release 资源文件
+      - name: Prepare release assets
+        run: |
+          # 创建一个临时目录来存放要发布的文件
+          mkdir -p release_assets
+          # 假设你的构建输出在 'dist' 目录，将其打包
+          tar -czf release_assets/my-project-v${{ github.ref_name }}.tar.gz dist/
+          # 确保将 README.md 也复制到资源目录
+          cp README.md release_assets/
+
+      # 5. 创建 GitHub Release 并上传文件
+      - name: Create Release and Upload Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }} # 使用触发工作流的 tag
+          name: Release ${{ github.ref_name }}
+          body: |
+            Release notes for version ${{ github.ref_name }}.
+            # 自动生成变更日志是更好的实践，这里使用简单描述
+            # 更高级的做法可参考搜索结果中的 changelog 生成脚本 [1,5](@ref)
+          draft: false
+          prerelease: false
+          files: |
+            release_assets/my-project-v${{ github.ref_name }}.tar.gz
+            release_assets/README.md
+          # 如果希望自动从提交信息生成发布说明，可以设置 generate_release_notes: true [8](@ref)
+          # generate_release_notes: true
