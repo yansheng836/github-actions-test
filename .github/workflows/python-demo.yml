@@ -1,0 +1,82 @@
+name: Daily Execution of Main Script
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 16 * * *'  # 每天北京时间 00:00（UTC 16:00）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set Beijing Timezone
+      uses: szenius/set-timezone@v1.2
+      with:
+        timezoneLinux: "Asia/Shanghai"
+
+    # Check out repository under $GITHUB_WORKSPACE, so the job can access it
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Run using Python 3.8 for consistency and aiohttp
+    - name: Set up Python 3.12.7
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12.7'
+        architecture: 'x64'
+        cache: 'pip'
+
+    # Install dependencies with `pip`
+    - name: Install requirements
+      run: |
+        python3 -m pip install --upgrade pip setuptools wheel
+        python3 -m pip install -r ./python/requirements.txt
+
+    # Generate all statistics images
+    - name: Spider data and dealwith
+      run: |
+        python3 --version
+        python3 ./python/main.py
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        EXCLUDED: ${{ secrets.EXCLUDED }}
+        EXCLUDED_LANGS: ${{ secrets.EXCLUDED_LANGS }}
+        EXCLUDE_FORKED_REPOS: true
+
+    # Commit all changed files to the repository
+    - name: Commit to the repo
+      run: |
+        echo 'Commit to the repo'
+        git config --global user.name "yansheng836/github-actions-test"
+        git config --global user.email "github-actions-test[bot]@yansheng836.github.io"
+        # 兼容git status中文乱码问题
+        git config --global core.quotepath false
+        # 配置 Git 自动处理换行符：git windows 有^M linux没有
+        # Windows 系统推荐设置：
+        # git config --global core.autocrlf true
+        # Linux/macOS 系统推荐设置
+        #git config --global core.autocrlf input
+        # 忽略行尾的回车
+        git config --global core.whitespace cr-at-eol
+
+        git status
+        git add .
+        # Force the build to succeed, even if no files were changed
+
+        #git commit -m 'Update generated files' || true
+        # 如果文件没有更新时
+        if [[ -n $(git status --porcelain) ]]; then
+            git commit -m 'python-bot: Update generated files'
+            git push
+        else
+            #git commit --allow-empty -m 'Update generated files(no file change)'
+            echo '没改动，不提交'
+        fi
+
