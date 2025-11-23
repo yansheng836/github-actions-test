@@ -36,7 +36,7 @@ jobs:
           # 创建一个临时目录来存放要发布的文件
           mkdir -p release_assets
           # 假设你的构建输出在 'dist' 目录，将其打包
-          tar -czf release_assets/my-project-v${{ github.ref_name }}.tar.gz dist/
+          tar -czf release_assets/my-project-v${{ github.ref_name }}.tar.gz release-dist/
           # 确保将 README.md 也复制到资源目录
           cp README.md release_assets/
 
