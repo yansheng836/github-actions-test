@@ -49,11 +49,11 @@ jobs:
           body: |
             Release notes for version ${{ github.ref_name }}.
             # 自动生成变更日志是更好的实践，这里使用简单描述
-            # 更高级的做法可参考搜索结果中的 changelog 生成脚本 [1,5](@ref)
+            # 更高级的做法可参考搜索结果中的 changelog 生成脚本 [1,5]
           draft: false
           prerelease: false
           files: |
             release_assets/my-project-v${{ github.ref_name }}.tar.gz
             release_assets/README.md
           # 如果希望自动从提交信息生成发布说明，可以设置 generate_release_notes: true [8](@ref)
-          # generate_release_notes: true
+          generate_release_notes: true
