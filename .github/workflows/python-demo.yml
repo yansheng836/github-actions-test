@@ -79,6 +79,7 @@ jobs:
             git push
         else
             git commit --allow-empty -m 'Update generated files(no file change)'
+            git push
             echo '没改动，不提交'
         fi
 
