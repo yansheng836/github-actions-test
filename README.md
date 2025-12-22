@@ -30,6 +30,7 @@
 - [x] 依赖管理 dependabot.yml （文件名好像需要是固定的！）
 - [x] github遇到tag自动release，并打包文件。![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/yansheng836/github-actions-test/release-demo.yml?style=flat&label=Release) 
 - [ ] 处理有子模块（.gitmodules）的情况。
+- [ ] 并发处理，同一个任务同时运行时，如何进行处理，参考：<https://github.com/yansheng836/spider-image-wallpaper-netbian>
 
 
 
