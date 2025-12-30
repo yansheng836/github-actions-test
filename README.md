@@ -32,5 +32,61 @@
 - [ ] 处理有子模块（.gitmodules）的情况。
 - [ ] 并发处理，同一个任务同时运行时，如何进行处理，参考：<https://github.com/yansheng836/spider-image-wallpaper-netbian>
 
+## 相关链接
+
+### 1.官方文档
+
+https://docs.github.com/zh/actions
+
+### 2.官方模板仓库
+
+https://github.com/actions/starter-workflows
+
+ci：一些常见语言的ci
+
+cpp：https://github.com/actions/starter-workflows/blob/main/ci/c-cpp.yml
+
+go：https://github.com/actions/starter-workflows/blob/main/ci/go.yml
+
+https://github.com/actions/starter-workflows/blob/main/ci/gradle.yml
+
+https://github.com/actions/starter-workflows/blob/main/ci/maven.yml
+
+https://github.com/actions/starter-workflows/blob/main/ci/node.js.yml
+
+https://github.com/actions/starter-workflows/blob/main/ci/php.yml
+
+https://github.com/actions/starter-workflows/blob/main/ci/pylint.yml
+
+https://github.com/actions/starter-workflows/blob/main/ci/python-package.yml
+
+包管理：https://github.com/actions/starter-workflows/blob/main/.github/dependabot.yml  
+
+review指派：https://github.com/actions/starter-workflows/blob/main/.github/auto_assign.yml
+
+https://github.com/actions/starter-workflows/blob/main/.github/pull_request_template.md
+
+提交到GitHub：https://github.com/actions/starter-workflows/blob/main/.github/workflows/sync-ghes.yaml
+
+关闭比较长时间的issue：https://github.com/actions/starter-workflows/blob/main/.github/workflows/stale.yml
+
+## 常见报错及处理
+
+### 1.actions没额度了
+
+https://github.com/yansheng836/spider-image-wallpaper-netbian/actions/runs/20584065501
+
+**Annotations**
+
+1 error
+
+The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings
+
+https://github.com/settings/billing
+
+![image-20251230095008833](README.assets/image-20251230095008833.png)
+
+公开仓库好像是不限制action使用时间的，免费个人账号的私有仓库一个月限制一共只能使用2000分钟，下个月自动刷新。
+
 
 
