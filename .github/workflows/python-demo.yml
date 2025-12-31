@@ -54,8 +54,10 @@ jobs:
     - name: Commit to the repo
       run: |
         echo 'Commit to the repo'
-        git config --global user.name "yansheng836/github-actions-test"
-        git config --global user.email "github-actions-test[bot]@yansheng836.github.io"
+        #git config --global user.name "yansheng836/github-actions-test"
+        #git config --global user.email "github-actions-test[bot]@yansheng836.github.io"
+        git config --global user.name "yansheng836bot"
+        git config --global user.email "yansheng836bot@163.com"
         # 兼容git status中文乱码问题
         git config --global core.quotepath false
         # 配置 Git 自动处理换行符：git windows 有^M linux没有
@@ -76,7 +78,8 @@ jobs:
             git commit -m 'python-bot: Update generated files'
             git push
         else
-            #git commit --allow-empty -m 'Update generated files(no file change)'
+            git commit --allow-empty -m 'Update generated files(no file change)'
+            git push
             echo '没改动，不提交'
         fi
 
