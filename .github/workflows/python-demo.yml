@@ -75,11 +75,11 @@ jobs:
         #git commit -m 'Update generated files' || true
         # 如果文件没有更新时
         if [[ -n $(git status --porcelain) ]]; then
-            git commit -m 'python-bot: Update generated files'
+            git commit -m 'python-bot: Update generated files on $(date +'%Y-%m-%d %H:%M:%S')'
             git push
         else
-            git commit --allow-empty -m 'Update generated files(no file change)'
-            git push
+            #git commit --allow-empty -m 'Update generated files(no file change)'
+            #git push
             echo '没改动，不提交'
         fi
 
