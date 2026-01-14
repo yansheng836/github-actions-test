@@ -32,27 +32,51 @@
 - [ ] 处理有子模块（.gitmodules）的情况。
 - [ ] 并发处理，同一个任务同时运行时，如何进行处理，参考：<https://github.com/yansheng836/spider-image-wallpaper-netbian>
 - [ ] 使用github action，发现ubuntu主机磁盘是80g的，但是只有15g是可用的，其他都被系统资源占用了，是否有办法扩大磁盘空间？或者使用轻量化的UBuntu主机？，参考：<https://yuanbao.tencent.com/chat/naQivTmsDa/0a83abb6-08a4-4fdc-8778-5a4cb38287cf>，具体工具：<https://github.com/marketplace/actions/maximize-github-runner-space>。参考配置如下：
+  ubuntu镜像：只有15GB可用
+  ```shell
+  Available storage:
+  Filesystem      Size  Used Avail Use% Mounted on
+  /dev/root        72G   57G   15G  80% /
+  tmpfs           3.9G   84K  3.9G   1% /dev/shm
+  tmpfs           1.6G  1.1M  1.6G   1% /run
+  tmpfs           5.0M     0  5.0M   0% /run/lock
+  /dev/sda16      881M   62M  758M   8% /boot
+  /dev/sda15      105M  6.2M   99M   6% /boot/efi
+  tmpfs           795M   12K  795M   1% /run/user/1001
+  ```
+  配置
   ```yml
   jobs:
     build:
       runs-on: ubuntu-latest
       steps:
-        - name: Maximize Disk Space for Python
+        # 详见：https://github.com/marketplace/actions/maximize-github-runner-space
+        - name: Maximize Runner Space
           uses: justinthelaw/maximize-github-runner-space@master
           with:
-            remove-dotnet: 'true'     # 移除.NET SDK（~10GB）
-            remove-android: 'true'    # 移除Android SDK（~14GB）
-            remove-docker: 'true'     # 移除Docker相关（~3GB）
-            remove-snap: 'true'       # 移除Snapd（~2GB）
-            remove-man-db: 'true'     # 移除man-db（~1GB）
-            removefonts: 'true'       # 移除非必要字体（~500MB）
-            remove-telemetry: 'true'  # 移除系统遥测工具（如snapd-telemetry）
-            remove-docs: 'true'       # 移除系统网页（~3GB）
-            remove-temp: 'true'       # 清理APT缓存和临时文件（~8GB）
-            remove-ruby: 'true'       # 移除Ruby（~1.5GB）
-            remove-nodejs: 'true'     # 移除Node.js（~3GB）
+            remove-dotnet: 'true'         # Removes .NET runtime and libraries. (frees ~2 GB)
+            remove-android: 'true'        # Removes Android SDKs and Tools. (frees ~9 GB)
+            remove-haskell: 'true'        # Removes GHC (Haskell) artifacts. (frees ~5 GB)
+            remove-codeql: 'true'         # Removes CodeQL Action Bundles. (frees ~5 GB)
+            remove-docker-images: 'true'  # Removes cached Docker images. (frees ~3 GB)
+            # Custom removal actions
+            remove-large-packages: 'true' # Removes unwanted large Apt packages. (frees ~3 GB)
+            remove-cached-tools: 'true'   # Removes cached tools used by setup actions by GitHub. (frees ~8 GB)
+            remove-swapfile: 'true'       # Removes the Swapfile. (frees ~4 GB)
   ```
-
+  处理后，有48GB可用，多出33GB。
+  ```shell
+  Available storage:
+  Filesystem      Size  Used Avail Use% Mounted on
+  /dev/root        72G   25G   48G  34% /
+  tmpfs           3.9G   84K  3.9G   1% /dev/shm
+  tmpfs           1.6G  1.1M  1.6G   1% /run
+  tmpfs           5.0M     0  5.0M   0% /run/lock
+  /dev/sda16      881M   62M  758M   8% /boot
+  /dev/sda15      105M  6.2M   99M   6% /boot/efi
+  tmpfs           795M   12K  795M   1% /run/user/1001
+  ```
+  
 ## 相关链接
 
 ### 1.官方文档
