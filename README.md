@@ -31,6 +31,27 @@
 - [x] github遇到tag自动release，并打包文件。![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/yansheng836/github-actions-test/release-demo.yml?style=flat&label=Release) 
 - [ ] 处理有子模块（.gitmodules）的情况。
 - [ ] 并发处理，同一个任务同时运行时，如何进行处理，参考：<https://github.com/yansheng836/spider-image-wallpaper-netbian>
+- [ ] 使用github action，发现ubuntu主机磁盘是80g的，但是只有15g是可用的，其他都被系统资源占用了，是否有办法扩大磁盘空间？或者使用轻量化的UBuntu主机？，参考：<https://yuanbao.tencent.com/chat/naQivTmsDa/0a83abb6-08a4-4fdc-8778-5a4cb38287cf>，具体工具：<https://github.com/marketplace/actions/maximize-github-runner-space>。参考配置如下：
+  ```yml
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Maximize Disk Space for Python
+          uses: justinthelaw/maximize-github-runner-space@master
+          with:
+            remove-dotnet: 'true'     # 移除.NET SDK（~10GB）
+            remove-android: 'true'    # 移除Android SDK（~14GB）
+            remove-docker: 'true'     # 移除Docker相关（~3GB）
+            remove-snap: 'true'       # 移除Snapd（~2GB）
+            remove-man-db: 'true'     # 移除man-db（~1GB）
+            removefonts: 'true'       # 移除非必要字体（~500MB）
+            remove-telemetry: 'true'  # 移除系统遥测工具（如snapd-telemetry）
+            remove-docs: 'true'       # 移除系统网页（~3GB）
+            remove-temp: 'true'       # 清理APT缓存和临时文件（~8GB）
+            remove-ruby: 'true'       # 移除Ruby（~1.5GB）
+            remove-nodejs: 'true'     # 移除Node.js（~3GB）
+  ```
 
 ## 相关链接
 
