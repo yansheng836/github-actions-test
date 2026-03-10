@@ -1,0 +1,78 @@
+name: checkout-one-branch-all
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ test ]
+
+# 避免多个同时运行，参考：https://yuanbao.tencent.com/chat/naQivTmsDa/01ded00b-422d-4c5f-81cc-01db97f46e84
+concurrency:
+  group: build-group-${{ github.ref }}  # 使用引用作为组标识
+  # cancel-in-progress: true  # 取消进行中的运行
+  cancel-in-progress: true  # 不取消旧的，新的加入队列，等旧的结束继续执行
+  # 想要实现终止新的执行的目的，需要结合下面的 ‘Check for in-progress runs’
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Set Beijing Timezone
+      uses: szenius/set-timezone@v1.2
+      with:
+        timezoneLinux: "Asia/Shanghai"
+        
+    # Check out repository under $GITHUB_WORKSPACE, so the job can access it
+    # - name: Checkout code
+    #   uses: actions/checkout@v3
+    #   with:
+    #     ref: ${{ github.ref_name }}
+    #     fetch-depth: 0 # all history
+
+    # 第一步：浅克隆，只拉 test 分支最新一次提交
+    # 第一步：浅克隆，只拉 test 分支最新一次提交
+    - name: Checkout test branch (shallow first)
+      uses: actions/checkout@v4
+      with:
+        ref: test
+        fetch-depth: 1          # 先只拉最新一次，速度快
+
+    # 第二步：只对 test 分支做完整历史展开，不碰其他分支
+    - name: Fetch full history of test branch only
+      run: |
+        git fetch --unshallow origin test
+        # 验证：应该只有 test 分支的完整记录
+        git log --oneline | wc -l
+        git branch -a           # 确认没有其他分支被拉取
+
+
+    # Commit all changed files to the repository
+    - name: Commit to the repo
+      run: |
+        echo 'Commit to the repo'
+        git config --global user.name "yansheng836bot"
+        git config --global user.email "yansheng836bot@163.com"
+        # 兼容git status中文乱码问题
+        git config --global core.quotepath false
+        # 保留所有提交历史，创建一个新的合并提交来整合分支。
+        git config --global pull.rebase false
+        # 增大缓冲区
+        git config --global http.postBuffer 1048576000  # 1GB
+
+        git status
+        echo 当前时间为：`date +'%Y-%m-%d %H:%M:%S'` > time.txt
+        #exit 0 # todo 测试用，这里直接退出
+        git add .
+        # Force the build to succeed, even if no files were changed
+        #git commit -m 'Update generated files' || true
+        # 如果是空提交，让它在action中失败吧
+        #git commit -m 'Update generated files'
+        git commit -m "Update generated files on $(date +'%Y-%m-%d %H:%M:%S')"
+        #git pull origin main
+        git push
+
+
