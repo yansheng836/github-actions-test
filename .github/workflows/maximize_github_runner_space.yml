@@ -33,8 +33,8 @@ jobs:
         # remove-dotnet: 'true'         # Removes .NET runtime and libraries. (frees ~2 GB)
         # remove-android: 'true'        # Removes Android SDKs and Tools. (frees ~9 GB)
         # remove-haskell: 'true'        # Removes GHC (Haskell) artifacts. (frees ~5 GB)
-        remove-codeql: 'true'         # Removes CodeQL Action Bundles. (frees ~5 GB)
-        # remove-docker-images: 'true'  # Removes cached Docker images. (frees ~3 GB)
+        # remove-codeql: 'true'         # Removes CodeQL Action Bundles. (frees ~5 GB)
+        remove-docker-images: 'true'  # Removes cached Docker images. (frees ~3 GB)
         # # Custom removal actions
         # remove-large-packages: 'true' # Removes unwanted large Apt packages. (frees ~3 GB)
         # remove-cached-tools: 'true'   # Removes cached tools used by setup actions by GitHub. (frees ~8 GB)
