@@ -25,7 +25,7 @@ jobs:
         df -h
         pwd
         du -sh ./
-        du -h -d 2 /
+        # du -h -d 2 /
     
     # 详见：https://github.com/marketplace/actions/maximize-github-runner-space
     - name: Maximize Runner Space
