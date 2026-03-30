@@ -32,14 +32,14 @@ jobs:
       uses: justinthelaw/maximize-github-runner-space@main
       with:
         cleanup-profile: custom
-        # remove-dotnet: "true"         # Removes .NET runtime and libraries. (frees ~2 GB)
-        # remove-android: "true"        # Removes Android SDKs and Tools. (frees ~9 GB)
-        # remove-haskell: "true"        # Removes GHC (Haskell) artifacts. (frees ~5 GB)
-        # remove-codeql: "true"         # Removes CodeQL Action Bundles. (frees ~5 GB)
-        # remove-docker-images: "true"  # Removes cached Docker images. (frees ~3 GB)
+        remove-dotnet: "true"         # Removes .NET runtime and libraries. (frees ~2 GB)
+        remove-android: "true"        # Removes Android SDKs and Tools. (frees ~9 GB)
+        remove-haskell: "true"        # Removes GHC (Haskell) artifacts. (frees ~5 GB)
+        remove-codeql: "true"         # Removes CodeQL Action Bundles. (frees ~5 GB)
+        remove-docker-images: "true"  # Removes cached Docker images. (frees ~3 GB)
         # Custom removal actions
-        # remove-large-packages: "true" # Removes unwanted large Apt packages. (frees ~3 GB)
-        # remove-cached-tools: "true"   # Removes cached tools used by setup actions by GitHub. (frees ~8 GB)
+        remove-large-packages: "true" # Removes unwanted large Apt packages. (frees ~3 GB)
+        remove-cached-tools: "true"   # Removes cached tools used by setup actions by GitHub. (frees ~8 GB)
         remove-swapfile: "true"       # Removes the Swapfile. (frees ~4 GB)
     
     - name: Check disk space
