@@ -40,7 +40,6 @@ jobs:
         # Custom removal actions
         remove-large-packages: "true" # Removes unwanted large Apt packages. (frees ~3 GB)
         remove-cached-tools: "true"   # Removes cached tools used by setup actions by GitHub. (frees ~8 GB)
-        remove-swapfile: "true"       # Removes the Swapfile. (frees ~4 GB)
     
     - name: Check disk space
       run: |
