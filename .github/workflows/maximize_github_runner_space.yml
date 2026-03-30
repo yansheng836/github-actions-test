@@ -29,7 +29,7 @@ jobs:
     
     # 详见：https://github.com/marketplace/actions/maximize-github-runner-space
     - name: Maximize Runner Space
-      uses: justinthelaw/maximize-github-runner-space@latest
+      uses: justinthelaw/maximize-github-runner-space@v0.8.0
       with:
         cleanup-profile: custom
         # remove-dotnet: 'true'         # Removes .NET runtime and libraries. (frees ~2 GB)
