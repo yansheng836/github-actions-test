@@ -28,12 +28,13 @@ jobs:
         # du -h -d 2 /
     
     # 详见：https://github.com/marketplace/actions/maximize-github-runner-space
+    # https://github.com/marketplace/actions/maximize-github-runner-space
     - name: Maximize Runner Space
       uses: justinthelaw/maximize-github-runner-space@main
       with:
         # Option A: Maximum Cleanup (Default)
         cleanup-profile: max            # default
-        skip-components: java,browsers,docker-engine
+        skip-components: cached-python
         swapfile-size: 2G
 
         # Option B: Custom Cleanup
