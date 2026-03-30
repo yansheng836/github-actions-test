@@ -133,5 +133,71 @@ https://github.com/settings/billing
 
 公开仓库好像是不限制action使用时间的，免费个人账号的私有仓库一个月限制一共只能使用2000分钟，下个月自动刷新。
 
+## 相关扩展
 
+### 1.Maximize Runner Space
+
+配置如下：
+
+```yml
+    # 详见：https://github.com/marketplace/actions/maximize-github-runner-space
+    # https://github.com/marketplace/actions/maximize-github-runner-space
+    - name: Maximize Runner Space
+      uses: justinthelaw/maximize-github-runner-space@main
+      with:
+        # Option A: Maximum Cleanup (Default)
+        cleanup-profile: max            # default
+        skip-components: cached-python
+        swapfile-size: 2G
+
+        # Option B: Custom Cleanup
+        # cleanup-profile: custom       # use with remove-*
+        # remove-dotnet: "true"         # Removes .NET runtime and libraries. (frees ~2 GB)
+        # remove-android: "true"        # Removes Android SDKs and Tools. (frees ~9 GB)
+        # remove-haskell: "true"        # Removes GHC (Haskell) artifacts. (frees ~5 GB)
+        # remove-codeql: "true"         # Removes CodeQL Action Bundles. (frees ~5 GB)
+        # remove-docker-images: "true"  # Removes cached Docker images. (frees ~3 GB)
+        # # Custom removal actions
+        # remove-large-packages: "true" # Removes unwanted large Apt packages. (frees ~3 GB)
+        # remove-cached-tools: "true"   # Removes cached tools used by setup actions by GitHub. (frees ~8 GB)
+```
+
+#### 效果：使用前后进行对比
+
+默认空间：总大小之前默认好像是70G，最近（2026年3月31日）发现好像变成145G了。
+
+这里只关注可用空间。
+
+默认磁盘空间如下：
+
+```shell
+df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   55G   90G  38% /
+tmpfs           7.9G   84K  7.9G   1% /dev/shm
+tmpfs           3.2G  1.1M  3.2G   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+efivarfs        128M   26K  128M   1% /sys/firmware/efi/efivars
+/dev/sda16      881M   64M  756M   8% /boot
+/dev/sda15      105M  6.2M   99M   6% /boot/efi
+tmpfs           1.6G   12K  1.6G   1% /run/user/1001
+```
+
+使用前后进行对比
+
+|  模式  | 清理类型               | 默认可用空间(G) | 清理空间(G) | 清理后可用空间(G) | 耗时(S) |
+| :----: | :--------------------- | --------------: | ----------: | ----------------: | ------: |
+|   -    | 默认                   |              90 |           0 |                90 |       0 |
+| 模式一 | max                    |              90 |          36 |               126 |   3m 0s |
+|        |                        |                 |             |                   |         |
+| 模式二 | remove-dotnet          |              90 |           5 |                95 |      9s |
+| 模式二 | remove-android         |              90 |          10 |               100 |     22s |
+| 模式二 | remove-haskell         |              90 |           4 |                94 |      2s |
+| 模式二 | remove-codeql          |              90 |           2 |                92 |      5s |
+| 模式二 | remove-docker-images   |              90 |           2 |                92 |     19s |
+| 模式二 | remove-large-packages  |              90 |           5 |                95 |  1m 52s |
+| 模式二 | remove-cached-tools    |              90 |           6 |                96 |     28s |
+| 模式二 | 清理以上模式二所有类型 |              90 |          30 |               120 |  2m 31s |
+
+如果不计较时间，使用模式一，能清理出更多磁盘空间。
 
