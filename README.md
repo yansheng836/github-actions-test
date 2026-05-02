@@ -201,3 +201,7 @@ tmpfs           1.6G   12K  1.6G   1% /run/user/1001
 
 如果不计较时间，使用模式一，能清理出更多磁盘空间。
 
+## 最近活动（jamesgeorge007/github-activity-readme）
+
+<!--START_SECTION:activity-->
+
