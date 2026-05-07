@@ -204,10 +204,10 @@ tmpfs           1.6G   12K  1.6G   1% /run/user/1001
 ## 最近活动（jamesgeorge007/github-activity-readme）
 
 <!--START_SECTION:activity-->
-1. ℹ️ Labeled issue [#2455](https://github.com/farion1231/cc-switch/issues/2455) in [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
-2. ❗ Opened issue [#2455](https://github.com/farion1231/cc-switch/issues/2455) in [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
-3. 🗣 Commented on [#2](https://github.com/solar-luna/Fully-automatic-article-generation-skill/issues/2#issuecomment-4197462408) in [solar-luna/Fully-automatic-article-generation-skill](https://github.com/solar-luna/Fully-automatic-article-generation-skill)
-4. ❗ Opened issue [#2](https://github.com/solar-luna/Fully-automatic-article-generation-skill/issues/2) in [solar-luna/Fully-automatic-article-generation-skill](https://github.com/solar-luna/Fully-automatic-article-generation-skill)
-5. ❗ Opened issue [#3](https://github.com/iamzifei/wechat-article-publisher-skill/issues/3) in [iamzifei/wechat-article-publisher-skill](https://github.com/iamzifei/wechat-article-publisher-skill)
+1. ❗ Opened issue [#143](https://github.com/OpenSenseNova/SenseNova-U1/issues/143) in [OpenSenseNova/SenseNova-U1](https://github.com/OpenSenseNova/SenseNova-U1)
+2. ℹ️ Labeled issue [#2455](https://github.com/farion1231/cc-switch/issues/2455) in [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
+3. ❗ Opened issue [#2455](https://github.com/farion1231/cc-switch/issues/2455) in [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
+4. 🗣 Commented on [#2](https://github.com/solar-luna/Fully-automatic-article-generation-skill/issues/2#issuecomment-4197462408) in [solar-luna/Fully-automatic-article-generation-skill](https://github.com/solar-luna/Fully-automatic-article-generation-skill)
+5. ❗ Opened issue [#2](https://github.com/solar-luna/Fully-automatic-article-generation-skill/issues/2) in [solar-luna/Fully-automatic-article-generation-skill](https://github.com/solar-luna/Fully-automatic-article-generation-skill)
 <!--END_SECTION:activity-->
 
