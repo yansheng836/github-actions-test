@@ -204,10 +204,10 @@ tmpfs           1.6G   12K  1.6G   1% /run/user/1001
 ## 最近活动（jamesgeorge007/github-activity-readme）
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#469](https://github.com/DayBreak-u/chineseocr_lite/issues/469#issuecomment-4668398954) in [DayBreak-u/chineseocr_lite](https://github.com/DayBreak-u/chineseocr_lite)
-2. ❗ Opened issue [#5](https://github.com/yansheng836/github-stats/issues/5) in [yansheng836/github-stats](https://github.com/yansheng836/github-stats)
-3. ❗ Opened issue [#4](https://github.com/yansheng836/github-stats/issues/4) in [yansheng836/github-stats](https://github.com/yansheng836/github-stats)
-4. ❗ Opened issue [#1](https://github.com/suqingdong/md2docx/issues/1) in [suqingdong/md2docx](https://github.com/suqingdong/md2docx)
-5. 🗣 Commented on [#143](https://github.com/OpenSenseNova/SenseNova-U1/issues/143#issuecomment-4394778163) in [OpenSenseNova/SenseNova-U1](https://github.com/OpenSenseNova/SenseNova-U1)
+1. ❌ Closed PR [#4](https://github.com/yansheng836/bilibili-Fanrenpc/pull/4) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
+2. 🗣 Commented on [#469](https://github.com/DayBreak-u/chineseocr_lite/issues/469#issuecomment-4668398954) in [DayBreak-u/chineseocr_lite](https://github.com/DayBreak-u/chineseocr_lite)
+3. ❗ Opened issue [#5](https://github.com/yansheng836/github-stats/issues/5) in [yansheng836/github-stats](https://github.com/yansheng836/github-stats)
+4. ❗ Opened issue [#4](https://github.com/yansheng836/github-stats/issues/4) in [yansheng836/github-stats](https://github.com/yansheng836/github-stats)
+5. ❗ Opened issue [#1](https://github.com/suqingdong/md2docx/issues/1) in [suqingdong/md2docx](https://github.com/suqingdong/md2docx)
 <!--END_SECTION:activity-->
 
