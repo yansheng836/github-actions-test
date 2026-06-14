@@ -204,10 +204,10 @@ tmpfs           1.6G   12K  1.6G   1% /run/user/1001
 ## 最近活动（jamesgeorge007/github-activity-readme）
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#8](https://github.com/yansheng836/bilibili-Fanrenpc/pull/8#issuecomment-4701494709) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
-2. 🚀 Published release [v0.4 (2026-06-14) — GitHub Pages 主题与样式优化](https://github.com/yansheng836/bilibili-Fanrenpc/releases/tag/v0.4) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
-3. 🚀 Published release [v0.3 (2026-06-14) — 修复播放量统计差额 & 修仙之旅纳入统计](https://github.com/yansheng836/bilibili-Fanrenpc/releases/tag/v0.3) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
-4. ❌ Closed PR [#4](https://github.com/yansheng836/bilibili-Fanrenpc/pull/4) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
-5. 🗣 Commented on [#469](https://github.com/DayBreak-u/chineseocr_lite/issues/469#issuecomment-4668398954) in [DayBreak-u/chineseocr_lite](https://github.com/DayBreak-u/chineseocr_lite)
+1. 🚀 Published release [v0.0.1 初版](https://github.com/yansheng836/jekyll-theme-guofeng/releases/tag/v0.0.1) in [yansheng836/jekyll-theme-guofeng](https://github.com/yansheng836/jekyll-theme-guofeng)
+2. 🗣 Commented on [#8](https://github.com/yansheng836/bilibili-Fanrenpc/pull/8#issuecomment-4701494709) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
+3. 🚀 Published release [v0.4 (2026-06-14) — GitHub Pages 主题与样式优化](https://github.com/yansheng836/bilibili-Fanrenpc/releases/tag/v0.4) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
+4. 🚀 Published release [v0.3 (2026-06-14) — 修复播放量统计差额 & 修仙之旅纳入统计](https://github.com/yansheng836/bilibili-Fanrenpc/releases/tag/v0.3) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
+5. ❌ Closed PR [#4](https://github.com/yansheng836/bilibili-Fanrenpc/pull/4) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
 <!--END_SECTION:activity-->
 
