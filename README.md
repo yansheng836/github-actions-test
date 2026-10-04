@@ -204,10 +204,10 @@ tmpfs           1.6G   12K  1.6G   1% /run/user/1001
 ## 最近活动（jamesgeorge007/github-activity-readme）
 
 <!--START_SECTION:activity-->
-1. ℹ️ Labeled issue [#7512](https://github.com/farion1231/cc-switch/issues/7512) in [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
-2. ❗ Opened issue [#7512](https://github.com/farion1231/cc-switch/issues/7512) in [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
-3. ❗ Opened issue [#90](https://github.com/WeiyePlayer/TTcut/issues/90) in [WeiyePlayer/TTcut](https://github.com/WeiyePlayer/TTcut)
-4. 🚀 Published release [v0.4 (2026-06-14) — GitHub Pages 主题与样式优化](https://github.com/yansheng836/bilibili-Fanrenpc/releases/tag/v0.4) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
-5. 🚀 Published release [v0.3 (2026-06-14) — 修复播放量统计差额 & 修仙之旅纳入统计](https://github.com/yansheng836/bilibili-Fanrenpc/releases/tag/v0.3) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
+1. 🗣 Commented on [#3](https://github.com/yansheng836/hero-skin/pull/3#issuecomment-5976817964) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
+2. ❌ Closed PR [#3](https://github.com/yansheng836/hero-skin/pull/3) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
+3. 🚀 Published release [v1.0.6-wzry](https://github.com/yansheng836/hero-skin/releases/tag/1.0.6-wzry) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
+4. ℹ️ Labeled issue [#7512](https://github.com/farion1231/cc-switch/issues/7512) in [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
+5. ❗ Opened issue [#7512](https://github.com/farion1231/cc-switch/issues/7512) in [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
 <!--END_SECTION:activity-->
 
