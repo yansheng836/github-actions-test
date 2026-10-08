@@ -204,10 +204,10 @@ tmpfs           1.6G   12K  1.6G   1% /run/user/1001
 ## 最近活动（jamesgeorge007/github-activity-readme）
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#3](https://github.com/yansheng836/hero-skin/pull/3#issuecomment-5976817964) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
-2. ❌ Closed PR [#3](https://github.com/yansheng836/hero-skin/pull/3) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
-3. 🚀 Published release [v1.0.6-wzry](https://github.com/yansheng836/hero-skin/releases/tag/1.0.6-wzry) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
-4. ℹ️ Labeled issue [#7512](https://github.com/farion1231/cc-switch/issues/7512) in [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
-5. ❗ Opened issue [#7512](https://github.com/farion1231/cc-switch/issues/7512) in [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
+1. 🗣 Commented on [#7](https://github.com/yansheng836/hero-skin/pull/7#issuecomment-6054828026) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
+2. 🗣 Commented on [#3](https://github.com/yansheng836/hero-skin/pull/3#issuecomment-5976817964) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
+3. ❌ Closed PR [#3](https://github.com/yansheng836/hero-skin/pull/3) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
+4. 🚀 Published release [v1.0.6-wzry](https://github.com/yansheng836/hero-skin/releases/tag/1.0.6-wzry) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
+5. ℹ️ Labeled issue [#7512](https://github.com/farion1231/cc-switch/issues/7512) in [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
 <!--END_SECTION:activity-->
 
