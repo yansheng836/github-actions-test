@@ -204,10 +204,10 @@ tmpfs           1.6G   12K  1.6G   1% /run/user/1001
 ## 最近活动（jamesgeorge007/github-activity-readme）
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#7](https://github.com/yansheng836/hero-skin/pull/7#issuecomment-6054828026) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
-2. 🗣 Commented on [#3](https://github.com/yansheng836/hero-skin/pull/3#issuecomment-5976817964) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
-3. ❌ Closed PR [#3](https://github.com/yansheng836/hero-skin/pull/3) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
-4. 🚀 Published release [v1.0.6-wzry](https://github.com/yansheng836/hero-skin/releases/tag/1.0.6-wzry) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
-5. ℹ️ Labeled issue [#7512](https://github.com/farion1231/cc-switch/issues/7512) in [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
+1. ❌ Closed PR [#13](https://github.com/yansheng836/bilibili-Fanrenpc/pull/13) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
+2. ❌ Closed PR [#15](https://github.com/yansheng836/bilibili-Fanrenpc/pull/15) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
+3. ❌ Closed PR [#11](https://github.com/yansheng836/bilibili-Fanrenpc/pull/11) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
+4. ❌ Closed PR [#12](https://github.com/yansheng836/bilibili-Fanrenpc/pull/12) in [yansheng836/bilibili-Fanrenpc](https://github.com/yansheng836/bilibili-Fanrenpc)
+5. 🗣 Commented on [#7](https://github.com/yansheng836/hero-skin/pull/7#issuecomment-6054828026) in [yansheng836/hero-skin](https://github.com/yansheng836/hero-skin)
 <!--END_SECTION:activity-->
 
